@@ -1,4 +1,4 @@
-@extends('admin.layouts.admin')
+@extends('financial.layouts.financial')
 
 @section('title')
     ویرایش دسته بندی
@@ -14,8 +14,8 @@
             <h5 class="font-weight-bold">ویرایش دسته بندی {{ $category->name }}</h5>
             </div>
             <hr>
-            @include('admin.sections.errors')
-            <form action="{{ route('admin.categories.update' , ['category' => $category->id]) }}" method="POST">
+            @include('financial.sections.errors')
+            <form action="{{ route('financial.categories.update' , ['category' => $category->id]) }}" method="POST">
                 @csrf
                 @method('put')
                 <div class="form-row">
@@ -46,7 +46,7 @@
                 </div>
 
                 <button class="btn btn-outline-primary mt-5" type="submit">ویرایش</button>
-                <a href="{{ route('admin.categories.index') }}" class="btn btn-dark mt-5 mr-3">بازگشت</a>
+                <a href="{{ route('financial.categories.index') }}" class="btn btn-dark mt-5 mr-3">بازگشت</a>
             </form>
         </div>
 

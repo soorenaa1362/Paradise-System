@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Financial;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -12,14 +12,14 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('admin.categories.index', compact('categories'));
+        return view('financial.categories.index', compact('categories'));
     }
 
     
     public function create()
     {
         $categories = Category::all();
-        return view('admin.categories.create', compact('categories'));
+        return view('financial.categories.create', compact('categories'));
     }
 
     
@@ -38,7 +38,7 @@ class CategoryController extends Controller
         ]);
 
         alert()->success('دسته ی جدید ایجاد شد', 'باتشکر');
-        return redirect()->route('admin.categories.index');
+        return redirect()->route('financial.categories.index');
     }
 
     
@@ -46,14 +46,14 @@ class CategoryController extends Controller
     {
         // $category = Category::find($id);
         // $categories = Category::all();
-        // return view('admin.categories.show', compact('category', 'categories'));
+        // return view('financial.categories.show', compact('category', 'categories'));
     }
 
     
     public function edit(Category $category)
     {
         $categories = Category::all();
-        return view('admin.categories.edit' , compact('category', 'categories'));
+        return view('financial.categories.edit' , compact('category', 'categories'));
     }
 
     
@@ -72,7 +72,7 @@ class CategoryController extends Controller
         ]);
 
         alert()->success('دسته ی مورد نظر ویرایش شد', 'باتشکر');
-        return redirect()->route('admin.categories.index');
+        return redirect()->route('financial.categories.index');
     }
 
     

@@ -1,4 +1,4 @@
-@extends('admin.layouts.admin')
+@extends('financial.layouts.financial')
 
 @section('title')
     دسته بندی ها
@@ -12,7 +12,7 @@
         <div class="col-xl-12 col-md-12 mb-4 p-4 bg-white">
             <div class="d-flex flex-column text-center flex-md-row justify-content-md-between mb-4">
                 <h5 class="font-weight-bold mb-3 mb-md-0">دسته بندی ها</h5>
-                <a class="btn btn-sm btn-outline-primary" href="{{route('admin.categories.create')}}">
+                <a class="btn btn-sm btn-outline-primary" href="{{route('financial.categories.create')}}">
                     <i class="fa fa-plus"></i>
                     ایجاد دسته جدید
                 </a>
@@ -50,7 +50,7 @@
                                 </th>
                                 <th>                                    
                                     <a class="btn btn-sm btn-outline-info mr-3"
-                                        href="{{ route('admin.categories.edit', $category->id) }}">ویرایش</a>                                    
+                                        href="{{ route('financial.categories.edit', $category->id) }}">ویرایش</a>                                    
                                 </th>
                             </tr>
                         @endforeach

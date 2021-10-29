@@ -1,4 +1,4 @@
-@extends('admin.layouts.admin')
+@extends('financial.layouts.financial')
 
 @section('title')
     نمایش دسته بندی
@@ -42,7 +42,7 @@
                 </div>
             </div>
 
-            <a href="{{ route('admin.categories.index') }}" class="btn btn-dark mt-5">بازگشت</a>
+            <a href="{{ route('financial.categories.index') }}" class="btn btn-dark mt-5">بازگشت</a>
 
         </div>
 

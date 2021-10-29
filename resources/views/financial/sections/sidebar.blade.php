@@ -28,7 +28,7 @@
 
     <!-- Nav Item - Brand -->
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('admin.categories.index') }}">
+        <a class="nav-link" href="{{ route('financial.categories.index') }}">
             <i class="fas fa-boxes"></i>
             <span> دسته بندی ها </span>
         </a>

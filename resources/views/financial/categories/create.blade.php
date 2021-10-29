@@ -1,4 +1,4 @@
-@extends('admin.layouts.admin')
+@extends('financial.layouts.financial')
 
 @section('title')
     ایجاد دسته جدید
@@ -14,8 +14,8 @@
                 <h5 class="font-weight-bold">ایجاد دسته جدید</h5>
             </div>
             <hr>
-            @include('admin.sections.errors')
-            <form action="{{ route('admin.categories.store') }}" method="POST">
+            @include('financial.sections.errors')
+            <form action="{{ route('financial.categories.store') }}" method="POST">
                 @csrf
 
                 <div class="form-row">
@@ -41,7 +41,7 @@
                 </div>
 
                 <button class="btn btn-outline-primary mt-5" type="submit">ثبت</button>
-                <a href="{{ route('admin.categories.index') }}" class="btn btn-dark mt-5 mr-3">بازگشت</a>
+                <a href="{{ route('financial.categories.index') }}" class="btn btn-dark mt-5 mr-3">بازگشت</a>
             </form>
         </div>
 

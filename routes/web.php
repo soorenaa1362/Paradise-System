@@ -1,13 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Home\HomeController;
-use App\Http\Controllers\Admin\BrandController;
-use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\AttributeController;
-use App\Http\Controllers\Admin\ProductImageController;
+use App\Http\Controllers\Financial\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,11 +15,11 @@ use App\Http\Controllers\Admin\ProductImageController;
 |
 */
 
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard');
+Route::get('/financial/dashboard', function () {
+    return view('financial.dashboard');
 })->name('dashboard');
 
-Route::prefix('admin')->name('admin.')->group(function(){
+Route::prefix('financial')->name('financial.')->group(function(){
 
     Route::resource('categories', CategoryController::class);
     
