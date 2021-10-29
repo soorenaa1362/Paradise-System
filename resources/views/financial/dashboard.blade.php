@@ -1,4 +1,4 @@
-@extends('admin.layouts.admin')
+@extends('financial.layouts.financial')
 
 @section('script')
     <script>

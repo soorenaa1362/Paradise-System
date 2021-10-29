@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Financial\CategoryController;
+use App\Http\Controllers\Financial\BuyController;
+use App\Http\Controllers\Financial\ShopController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +24,7 @@ Route::get('/financial/dashboard', function () {
 Route::prefix('financial')->name('financial.')->group(function(){
 
     Route::resource('categories', CategoryController::class);
+    Route::resource('buys', BuyController::class);
+    Route::resource('shops', ShopController::class);
     
 });
